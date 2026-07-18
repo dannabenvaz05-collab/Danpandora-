@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Danpandora</title>
+<style>
+body{
+    background:#111;
+    color:white;
+    font-family:Arial, sans-serif;
+    text-align:center;
+    padding:60px;
+}
+h1{
+    font-size:48px;
+}
+input{
+    padding:12px;
+    font-size:18px;
+}
+button{
+    padding:12px 20px;
+    font-size:18px;
+    cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<h1>💎 DANPANDORA</h1>
+
+<p>Proyecto ficticio.</p>
+
+<p>Introduce la contraseña:</p>
+
+<input type="password" id="pass">
+
+<button onclick="entrar()">Entrar</button>
+
+<p id="mensaje"></p>
+
+<script>
+function entrar(){
+    if(document.getElementById("pass").value=="Dan2026"){
+        document.body.innerHTML="<h1>Bienvenido a Danpandora</h1><p>Próximamente...</p>";
+    }else{
+        document.getElementById("mensaje").innerHTML="Contraseña incorrecta";
+    }
+}
+</script>
+
+</body>
+</html>
