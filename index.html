@@ -327,6 +327,108 @@ margin-bottom:30px;
 
 }
 
+.colecciones{
+
+padding:100px 8%;
+
+background:#fff;
+
+}
+
+.colecciones h2{
+
+text-align:center;
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:58px;
+
+color:#b89233;
+
+margin-bottom:60px;
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:35px;
+
+}
+
+.card{
+
+background:white;
+
+border-radius:22px;
+
+overflow:hidden;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+transition:.35s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.card img{
+
+width:100%;
+
+height:360px;
+
+object-fit:cover;
+
+}
+
+.card h3{
+
+padding:20px;
+
+font-size:26px;
+
+font-family:'Cormorant Garamond',serif;
+
+color:#b89233;
+
+}
+
+.card p{
+
+padding:0 20px 20px;
+
+line-height:1.6;
+
+}
+
+.card a{
+
+display:block;
+
+margin:20px;
+
+padding:14px;
+
+text-align:center;
+
+background:#d5b063;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:30px;
+
+}
+  
 </style>
 
 </head>
@@ -414,15 +516,48 @@ ENTRAR
   
 </section>
 
-<section id="colecciones">
+<section id="colecciones" class="colecciones">
 
-<h2>Colecciones</h2>
+<h2>Nuestras Colecciones</h2>
 
-</section>
+<div class="grid">
 
-<section id="colaboraciones">
+<div class="card">
+<img src="https://placehold.co/600x700/f8f4ef/b89233?text=Danpandora" alt="">
+<h3>Danpandora</h3>
+<p>Colección principal con todas las joyas exclusivas.</p>
+<a href="#">Ver colección</a>
+</div>
 
-<h2>Colaboraciones</h2>
+<div class="card">
+<img src="https://placehold.co/600x700/f7efe7/c9a24d?text=Sophora+x+Danpandora" alt="">
+<h3>Sophora × Danpandora</h3>
+<p>Una colaboración entre belleza y lujo.</p>
+<a href="#">Ver colección</a>
+</div>
+
+<div class="card">
+<img src="https://placehold.co/600x700/efe6dc/b89233?text=Henry+Danger" alt="">
+<h3>Sophora × Danpandora × Henry Danger The Movie</h3>
+<p>Edición especial inspirada en la película.</p>
+<a href="#">Ver colección</a>
+</div>
+
+<div class="card">
+<img src="https://placehold.co/600x700/f8f4ef/000000?text=Louis+Vuitton" alt="">
+<h3>Danpandora × Louis Vuitton</h3>
+<p>Lujo y elegancia en una colección exclusiva.</p>
+<a href="#">Ver colección</a>
+</div>
+
+<div class="card">
+<img src="https://placehold.co/600x700/f9f2ef/b89233?text=Millie+Bobby+Brown" alt="">
+<h3>Danpandora × Millie Bobby Brown</h3>
+<p>Inspirada en un estilo moderno y sofisticado.</p>
+<a href="#">Ver colección</a>
+</div>
+
+</div>
 
 </section>
 
