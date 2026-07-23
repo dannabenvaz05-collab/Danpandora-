@@ -428,6 +428,16 @@ text-decoration:none;
 border-radius:30px;
 
 }
+
+#inicio,
+#colecciones,
+#colaboraciones,
+#noticias,
+#contacto{
+
+display:none;
+
+}
   
 </style>
 
@@ -445,15 +455,15 @@ Danpandora
 
 <nav>
 
-<a href="#inicio">Inicio</a>
+<a href="#" onclick="mostrar('inicio')">Inicio</a>
 
-<a href="#colecciones">Colecciones</a>
+<a href="#" onclick="mostrar('colecciones')">Colecciones</a>
 
-<a href="#colaboraciones">Colaboraciones</a>
+<a href="#" onclick="mostrar('colaboraciones')">Colaboraciones</a>
 
-<a href="#noticias">Noticias</a>
+<a href="#" onclick="mostrar('noticias')">Noticias</a>
 
-<a href="#contacto">Contacto</a>
+<a href="#" onclick="mostrar('contacto')">Contacto</a>
 
 </nav>
 
@@ -583,7 +593,7 @@ if(clave==="Dan2026"){
 
 document.querySelector(".hero").style.display="none";
 
-document.getElementById("inicio").style.display="block";
+mostrar("inicio");
 
 }
 
@@ -595,6 +605,23 @@ document.getElementById("mensaje").innerHTML="Contraseña incorrecta.";
 
 }
 
+function mostrar(seccion){
+
+document.getElementById("inicio").style.display="none";
+
+document.getElementById("colecciones").style.display="none";
+
+document.getElementById("colaboraciones").style.display="none";
+
+document.getElementById("noticias").style.display="none";
+
+document.getElementById("contacto").style.display="none";
+
+document.getElementById(seccion).style.display="block";
+
+window.scrollTo(0,0);
+
+}
 </script>
 
 <footer>
