@@ -901,24 +901,60 @@ document.getElementById("mensaje").innerHTML="Contraseña incorrecta.";
 
 }
 
+let acceso = false;
+
+function entrar(){
+
+let clave = document.getElementById("password").value;
+
+if(clave === "Dan2026"){
+
+acceso = true;
+
+document.querySelector(".hero").style.display = "none";
+
+mostrar("inicio");
+
+}else{
+
+document.getElementById("mensaje").innerHTML = "Contraseña incorrecta.";
+
+}
+
+}
+
 function mostrar(seccion){
 
+if(!acceso){
+
+return;
+
+}
+
 document.getElementById("inicio").style.display="none";
+
 document.getElementById("historia").style.display="none";
+
 document.getElementById("colecciones").style.display="none";
+
 document.getElementById("colaboraciones").style.display="none";
+
 document.getElementById("noticias").style.display="none";
+
 document.getElementById("contacto").style.display="none";
 
 document.getElementById(seccion).style.display="block";
 
 window.scrollTo({
+
 top:0,
+
 behavior:"smooth"
+
 });
 
 }
-
+  
 document.addEventListener("keydown",function(e){
 
 if(e.key==="Enter" && document.querySelector(".hero").style.display!=="none"){
