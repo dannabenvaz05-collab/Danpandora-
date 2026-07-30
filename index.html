@@ -4,16 +4,23 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Danpandora</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+
 <style>
+
+/* =========================
+   ESTILOS GENERALES
+========================= */
 
 *{
 margin:0;
@@ -67,6 +74,11 @@ cursor:pointer;
 nav a:hover{
 color:#c9a24d;
 }
+
+
+/* =========================
+   LOGIN
+========================= */
 
 .hero{
 height:100vh;
@@ -141,28 +153,45 @@ color:#b89233;
 font-weight:600;
 }
 
+
+/* =========================
+   SECCIONES
+========================= */
+
 #inicio,
 #historia,
 #colecciones,
 #colaboraciones,
 #noticias,
-#contacto{
+#contacto,
+#danpandora-productos,
+#producto-detalle{
 display:none;
 padding:120px 8%;
 background:#fff;
 min-height:100vh;
 }
 
+
+/* =========================
+   BANNER
+========================= */
+
 .banner{
 height:85vh;
+
 background:
 linear-gradient(rgba(0,0,0,.30),rgba(0,0,0,.30)),
 url("images/images/images/2A00812F-483C-465A-84E8-DDF5BCD00F49.png");
+
 background-size:cover;
 background-position:center;
+
 display:flex;
 align-items:center;
+
 border-radius:25px;
+
 padding:8%;
 }
 
@@ -186,6 +215,11 @@ line-height:1.8;
 margin-bottom:30px;
 }
 
+
+/* =========================
+   BOTONES
+========================= */
+
 .boton{
 display:inline-block;
 padding:16px 42px;
@@ -195,12 +229,19 @@ text-decoration:none;
 border-radius:40px;
 font-weight:600;
 transition:.35s;
+cursor:pointer;
+border:none;
 }
 
 .boton:hover{
 background:#b89233;
 transform:translateY(-4px);
 }
+
+
+/* =========================
+   TITULOS
+========================= */
 
 .colecciones h2{
 text-align:center;
@@ -209,6 +250,11 @@ font-size:58px;
 color:#b89233;
 margin-bottom:55px;
 }
+
+
+/* =========================
+   BLOQUES DE COLECCIONES
+========================= */
 
 .coleccion{
 display:grid;
@@ -253,14 +299,54 @@ text-transform:uppercase;
 letter-spacing:1px;
 }
 
+
+/* =========================
+   PRODUCTOS DANPANDORA
+========================= */
+
+#danpandora-productos{
+padding-bottom:180px;
+}
+
+.productos-header{
+text-align:center;
+max-width:900px;
+margin:0 auto 60px;
+}
+
+.productos-header h2{
+font-family:'Cormorant Garamond',serif;
+font-size:58px;
+color:#b89233;
+margin-bottom:25px;
+}
+
+.productos-header p{
+font-size:19px;
+line-height:1.9;
+color:#666;
+}
+
+
+/* CUADRÍCULA DE PRODUCTOS */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:35px;
+margin-top:50px;
+padding-bottom:100px;
+}
+
+
+/* TARJETA */
+
 .card{
 background:white;
-border-radius:20px;
-padding:25px;
-text-align:center;
-box-shadow:0 8px 25px rgba(0,0,0,.08);
-transition:.3s;
-border:1px solid #ece3d2;
+border-radius:22px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.35s;
 }
 
 .card:hover{
@@ -269,46 +355,93 @@ transform:translateY(-8px);
 
 .card img{
 width:100%;
-height:240px;
-object-fit:contain;
-margin-bottom:18px;
+height:300px;
+object-fit:cover;
+display:block;
 }
 
 .card h3{
+padding:20px 20px 8px;
+font-size:26px;
 font-family:'Cormorant Garamond',serif;
-font-size:30px;
 color:#b89233;
-margin-bottom:10px;
-padding:0;
 }
 
 .card p{
-font-size:22px;
-color:#555;
-padding:0;
-margin-bottom:18px;
+padding:0 20px 5px;
+line-height:1.7;
+font-size:17px;
 }
 
 .card a{
-display:inline-block;
-padding:12px 30px;
+display:block;
+margin:20px;
+padding:14px;
+text-align:center;
 background:#d5b063;
 color:white;
 text-decoration:none;
 border-radius:30px;
-margin:0;
-font-weight:600;
+cursor:pointer;
 }
 
-.grid{
+
+/* =========================
+   DETALLE DEL PRODUCTO
+========================= */
+
+#producto-detalle{
+padding-bottom:180px;
+}
+
+.producto-detalle-contenedor{
+max-width:1100px;
+margin:0 auto;
+}
+
+.producto-detalle-caja{
 display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:35px;
-margin-top:50px;
-margin-bottom:120px;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+background:white;
+padding:50px;
+border-radius:25px;
+box-shadow:0 10px 35px rgba(0,0,0,.08);
 }
 
-margin-bottom:180px;
+.producto-detalle-imagen img{
+width:100%;
+max-height:600px;
+object-fit:contain;
+border-radius:20px;
+}
+
+.producto-detalle-info h2{
+font-family:'Cormorant Garamond',serif;
+font-size:52px;
+color:#b89233;
+margin-bottom:20px;
+}
+
+.producto-precio{
+font-size:25px;
+font-weight:600;
+color:#333;
+margin-bottom:25px;
+}
+
+.producto-descripcion{
+font-size:18px;
+line-height:1.9;
+color:#555;
+margin-bottom:35px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
 background:#111;
@@ -317,6 +450,11 @@ text-align:center;
 padding:35px;
 border-top:1px solid #d8c38b;
 }
+
+
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media(max-width:900px){
 
@@ -355,22 +493,26 @@ margin:auto;
 font-size:38px;
 }
 
-}
-
-}
-
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+grid-template-columns:1fr;
 }
-  
+
+.producto-detalle-caja{
+grid-template-columns:1fr;
+padding:30px;
+}
+
+.producto-detalle-info h2{
+font-size:42px;
+}
+
+}
+
 </style>
 
 </head>
 
 <body>
-
 <header>
 
 <div class="logo">
@@ -379,44 +521,75 @@ Danpandora
 
 <nav>
 
-<a href="#" onclick="mostrar('inicio')">Inicio</a>
+<a href="#" onclick="mostrar('inicio'); return false;">
+Inicio
+</a>
 
-<a href="#" onclick="mostrar('historia')">Nuestra Historia</a>
+<a href="#" onclick="mostrar('historia'); return false;">
+Nuestra Historia
+</a>
 
-<a href="#" onclick="mostrar('colecciones')">Colecciones</a>
+<a href="#" onclick="mostrar('colecciones'); return false;">
+Colecciones
+</a>
 
-<a href="#" onclick="mostrar('colaboraciones')">Colaboraciones</a>
+<a href="#" onclick="mostrar('colaboraciones'); return false;">
+Colaboraciones
+</a>
 
-<a href="#" onclick="mostrar('noticias')">Noticias</a>
+<a href="#" onclick="mostrar('noticias'); return false;">
+Noticias
+</a>
 
-<a href="#" onclick="mostrar('contacto')">Contacto</a>
+<a href="#" onclick="mostrar('contacto'); return false;">
+Contacto
+</a>
 
 </nav>
 
 </header>
 
+
+<!-- =========================
+     PANTALLA DE CONTRASEÑA
+========================= -->
+
 <section class="hero">
 
 <div class="login-box">
 
-<div class="corona">👑</div>
+<div class="corona">
+👑
+</div>
 
-<h1>Danpandora</h1>
+<h1>
+Danpandora
+</h1>
 
-<h3>LUXURY COLLECTION</h3>
+<h3>
+LUXURY COLLECTION
+</h3>
 
 <p>
+
 Bienvenido al portal oficial de Danpandora.
+
+<br>
+
 Este sitio es un proyecto creativo y privado.
+
 </p>
 
 <input
 type="password"
 id="password"
-placeholder="Introduce la contraseña">
+placeholder="Introduce la contraseña"
+>
 
 <button onclick="entrar()">
+
 ENTRAR
+
 </button>
 
 <p id="mensaje"></p>
@@ -425,19 +598,33 @@ ENTRAR
 
 </section>
 
+
+<!-- =========================
+     INICIO
+========================= -->
+
 <section id="inicio">
 
 <div class="banner">
 
 <div class="banner-texto">
 
-<h1>La Maison Danpandora</h1>
+<h1>
+La Maison Danpandora
+</h1>
 
 <p>
-Joyería, belleza y colaboraciones exclusivas que redefinen el lujo contemporáneo.
+
+Joyería, belleza y colaboraciones exclusivas
+que redefinen el lujo contemporáneo.
+
 </p>
 
-<a href="#" class="boton" onclick="mostrar('colecciones')">
+<a
+href="#"
+class="boton"
+onclick="mostrar('colecciones'); return false;"
+>
 
 Explorar colección
 
@@ -449,211 +636,299 @@ Explorar colección
 
 </section>
 
-<section id="historia" class="colecciones">
 
-<h2>Nuestra Historia</h2>
+<!-- =========================
+     HISTORIA
+========================= -->
+
+<section
+id="historia"
+class="colecciones"
+>
+
+<h2>
+Nuestra Historia
+</h2>
+
 
 <div class="coleccion">
 
-<img src="images/images/images/ADC0C0F3-4708-40EF-B86F-BCE1583A922B.png" alt="Danna Benavides Vázquez">
+
+<img
+src="images/images/images/ADC0C0F3-4708-40EF-B86F-BCE1583A922B.png"
+alt="Danna Benavides Vázquez"
+>
+
 
 <div class="info">
 
+
 <span class="etiqueta">
+
 Fundadora & CEO
+
 </span>
 
-<h3>Danna Benavides Vázquez</h3>
+
+<h3>
+
+Danna Benavides Vázquez
+
+</h3>
+
 
 <p>
 
-Danpandora fue fundada oficialmente en 2026 por <strong>Danna Benavides Vázquez</strong>, junto a su mánager <strong>Leonardo Saint-Claire</strong> y todo su equipo, con el propósito de crear una Maison dedicada al lujo, la joyería, la belleza y las colaboraciones internacionales.
+Danpandora fue fundada oficialmente en 2026
+por <strong>Danna Benavides Vázquez</strong>,
+junto a su mánager
+<strong>Leonardo Saint-Claire</strong>
+y todo su equipo, con el propósito de crear
+una Maison dedicada al lujo, la joyería,
+la belleza y las colaboraciones internacionales.
 
 </p>
+
 
 <p>
 
-La idea nació durante 2025 como un proyecto creativo con una visión clara: construir una marca que uniera elegancia, innovación y diseño exclusivo. Después de meses de planeación y desarrollo, Danpandora fue presentada oficialmente en 2026.
+La idea nació durante 2025 como un proyecto
+creativo con una visión clara: construir una
+marca que uniera elegancia, innovación y
+diseño exclusivo.
+
+Después de meses de planeación y desarrollo,
+Danpandora fue presentada oficialmente en 2026.
 
 </p>
+
 
 <p>
 
-Desde entonces, la Maison continúa creciendo mediante colecciones originales, colaboraciones internacionales y proyectos exclusivos, manteniendo siempre el compromiso de ofrecer lujo contemporáneo, creatividad y excelencia en cada lanzamiento.
+Desde entonces, la Maison continúa creciendo
+mediante colecciones originales,
+colaboraciones internacionales y proyectos
+exclusivos, manteniendo siempre el compromiso
+de ofrecer lujo contemporáneo, creatividad y
+excelencia en cada lanzamiento.
 
 </p>
 
-<a href="#" class="boton" onclick="mostrar('colecciones')">
+
+<a
+href="#"
+class="boton"
+onclick="mostrar('colecciones'); return false;"
+>
 
 Ver Colecciones
 
 </a>
 
+
 </div>
 
 </div>
 
 </section>
+  
+<!-- ============================= -->
+<!-- PARTE 3 — COLECCIONES -->
+<!-- ============================= -->
 
 <section id="colecciones" class="colecciones">
 
 <h2>Colecciones Exclusivas</h2>
 
-<p style="text-align:center;
+<p style="
+text-align:center;
 max-width:850px;
 margin:0 auto 70px;
 font-size:20px;
 line-height:1.9;
-color:#666;">
-
-Descubre el universo Danpandora mediante colecciones inspiradas en el lujo contemporáneo, la belleza y el diseño exclusivo.
-
+color:#666;
+">
+Descubre el universo Danpandora mediante colecciones inspiradas
+en el lujo contemporáneo, la belleza y el diseño exclusivo.
 </p>
+
+
+<!-- COLECCIÓN DANPANDORA -->
 
 <div class="coleccion">
 
-<img src="images/images/images/6B6DD983-184C-4A63-950C-D96716CDD599.jpeg" alt="Danpandora">
+<img
+src="images/images/images/6B6DD983-184C-4A63-950C-D96716CDD599.jpeg"
+alt="Colección Danpandora"
+>
 
 <div class="info">
 
 <span class="etiqueta">
-
 Colección Principal
-
 </span>
 
 <h3>Danpandora</h3>
 
 <p>
-
-La colección insignia de la Maison representa la esencia de Danpandora mediante piezas elegantes inspiradas en la alta joyería contemporánea.
-
+La colección insignia de la Maison representa la esencia de
+Danpandora mediante piezas elegantes inspiradas en la alta
+joyería contemporánea.
 </p>
 
-<a href="#" class="boton" onclick="mostrarColeccionDanpandora()">
-
+<a
+href="#"
+class="boton"
+onclick="mostrarColeccionDanpandora(); return false;"
+>
 Explorar colección
-
 </a>
-  
+
 </div>
 
 </div>
+
+
+<!-- ============================= -->
+<!-- DANPANDORA x SOFORA -->
+<!-- ============================= -->
 
 <div class="coleccion">
 
-<img src="images/images/images/BBC5B678-BAB8-4AC9-A42E-6669FEDC1A5F.png" alt="Danpandora x Sofora">
+<img
+src="images/images/images/BBC5B678-BAB8-4AC9-A42E-6669FEDC1A5F.png"
+alt="Danpandora x Sofora"
+>
 
 <div class="info">
 
 <span class="etiqueta">
-
 Colaboración Oficial
-
 </span>
 
 <h3>Danpandora × Sofora</h3>
 
 <p>
-
-Una colección que une la belleza y la alta joyería para crear una experiencia elegante y exclusiva.
-
+Una colección que une la belleza y la alta joyería para crear
+una experiencia elegante y exclusiva.
 </p>
 
-<a href="#" class="boton">
-
+<a
+href="#"
+class="boton"
+>
 Explorar colección
-
 </a>
 
 </div>
 
 </div>
 
+
+<!-- ============================= -->
+<!-- HENRY DANGER -->
+<!-- ============================= -->
+
 <div class="coleccion">
 
-<img src="images/images/images/0989022B-825A-48B1-BE79-5936972ACAED.png" alt="Henry Danger">
+<img
+src="images/images/images/0989022B-825A-48B1-BE79-5936972ACAED.png"
+alt="Henry Danger"
+>
 
 <div class="info">
 
 <span class="etiqueta">
-
 Edición Limitada
-
 </span>
 
 <h3>Danpandora × Sofora × Henry Danger The Movie</h3>
 
 <p>
-
-Una colección especial creada para celebrar el estreno de <strong>Henry Danger The Movie</strong>, combinando joyería, belleza y diseño inspirado en los personajes de la película.
-
+Una colección especial creada para celebrar el estreno de
+Henry Danger The Movie, combinando joyería, belleza y diseño
+inspirado en los personajes de la película.
 </p>
 
-<a href="#" class="boton">
-
+<a
+href="#"
+class="boton"
+>
 Explorar colección
-
 </a>
 
 </div>
 
 </div>
 
+
+<!-- ============================= -->
+<!-- LOUIS VUITTON -->
+<!-- ============================= -->
+
 <div class="coleccion">
 
-<img src="images/images/images/08944D3B-06CC-4DD8-8F22-0ACFB6C2AF0E.png" alt="Louis Vuitton">
+<img
+src="images/images/images/08944D3B-06CC-4DD8-8F22-0ACFB6C2AF0E.png"
+alt="Louis Vuitton"
+>
 
 <div class="info">
 
 <span class="etiqueta">
-
 Luxury Collection
-
 </span>
 
 <h3>Danpandora × Louis Vuitton</h3>
 
 <p>
-
-La unión de dos casas de lujo para presentar una colección sofisticada inspirada en la elegancia clásica, la exclusividad y la artesanía contemporánea.
-
+La unión de dos casas de lujo para presentar una colección
+sofisticada inspirada en la elegancia clásica, la exclusividad
+y la artesanía contemporánea.
 </p>
 
-<a href="#" class="boton">
-
+<a
+href="#"
+class="boton"
+>
 Explorar colección
-
 </a>
 
 </div>
 
 </div>
 
+
+<!-- ============================= -->
+<!-- FLORENCE BY MILLS -->
+<!-- ============================= -->
+
 <div class="coleccion">
 
-<img src="images/images/images/C7FF2D6E-6FEB-42FE-9466-E4BC8BBB9242.png" alt="Florence by Mills">
+<img
+src="images/images/images/C7FF2D6E-6FEB-42FE-9466-E4BC8BBB9242.png"
+alt="Florence by Mills"
+>
 
 <div class="info">
 
 <span class="etiqueta">
-
 Beauty Collection
-
 </span>
 
 <h3>Danpandora × Florence by Mills</h3>
 
 <p>
-
-Una colaboración inspirada en la belleza moderna creada junto a Florence by Mills, combinando frescura, elegancia y creatividad en una colección exclusiva.
-
+Una colaboración inspirada en la belleza moderna creada junto
+a Florence by Mills, combinando frescura, elegancia y creatividad
+en una colección exclusiva.
 </p>
 
-<a href="#" class="boton">
-
+<a
+href="#"
+class="boton"
+>
 Explorar colección
-
 </a>
 
 </div>
@@ -662,129 +937,374 @@ Explorar colección
 
 </section>
 
-<section id="danpandora-productos" class="colecciones" style="display:none;">
+
+<!-- ========================================== -->
+<!-- PÁGINA OCULTA DE PRODUCTOS DANPANDORA -->
+<!-- ========================================== -->
+
+<section
+id="danpandora-productos"
+class="colecciones"
+style="display:none;"
+>
 
 <h2>Colección Danpandora</h2>
 
-<p style="text-align:center;max-width:900px;margin:0 auto 60px;font-size:20px;line-height:1.8;color:#666;">
+<p style="
+text-align:center;
+max-width:900px;
+margin:0 auto 50px;
+font-size:20px;
+line-height:1.9;
+color:#666;
+">
 
 Descubre la primera colección oficial de Danpandora.
+Cada pieza ha sido diseñada para representar lujo,
+elegancia y exclusividad mediante detalles cuidadosamente
+elaborados e inspirados en la alta joyería.
 
 </p>
 
-<a href="#" class="boton" onclick="volverColecciones()" style="margin-bottom:50px;display:inline-block;">
-
-← Volver a Colecciones
-
-</a>
 
 <div class="grid">
 
+
+<!-- PRODUCTO 1 -->
+
 <div class="card">
 
-<img src="images/images/images/EC270B51-6507-4574-A9AD-7C3DCF11FB57.png">
+<img
+src="images/images/images/EC270B51-6507-4574-A9AD-7C3DCF11FB57.png"
+alt="Pulsera Signature Crown"
+>
 
-<h3>Pulsera Signature Crown</h3>
+<h3>
+Pulsera Signature Crown
+</h3>
 
-<p>$8,990 MXN</p>
+<p>
+$8,990 MXN
+</p>
 
-<a href="#">Ver producto</a>
+<a
+href="#"
+onclick="abrirProducto('signature'); return false;"
+>
+Ver producto
+</a>
 
 </div>
 
+
+<!-- PRODUCTO 2 -->
+
 <div class="card">
 
-<img src="images/images/images/CADA6735-BDF6-4448-A93B-A8BF6F047DD2.png">
+<img
+src="images/images/images/CADA6735-BDF6-4448-A93B-A8BF6F047DD2.png"
+alt="Royal Heart Charm"
+>
 
-<h3>Royal Heart Charm</h3>
+<h3>
+Royal Heart Charm
+</h3>
 
-<p>$3,290 MXN</p>
+<p>
+$3,290 MXN
+</p>
 
-<a href="#">Ver producto</a>
+<a
+href="#"
+onclick="abrirProducto('heart'); return false;"
+>
+Ver producto
+</a>
 
 </div>
 
+
+<!-- PRODUCTO 3 -->
+
 <div class="card">
 
-<img src="images/images/images/B1280CD5-B0BE-4832-927C-1A7908FAC3A7.png">
+<img
+src="images/images/images/B1280CD5-B0BE-4832-927C-1A7908FAC3A7.png"
+alt="Royal Compass Charm"
+>
 
-<h3>Royal Compass Charm</h3>
+<h3>
+Royal Compass Charm
+</h3>
 
-<p>$3,690 MXN</p>
+<p>
+$3,690 MXN
+</p>
 
-<a href="#">Ver producto</a>
+<a
+href="#"
+onclick="abrirProducto('compass'); return false;"
+>
+Ver producto
+</a>
 
 </div>
 
+
+<!-- PRODUCTO 4 -->
+
 <div class="card">
 
-<img src="images/images/images/DDC965A6-10D2-404D-B0C9-BA452633F5FF.png">
+<img
+src="images/images/images/DDC965A6-10D2-404D-B0C9-BA452633F5FF.png"
+alt="Celestial Moon Charm"
+>
 
-<h3>Celestial Moon Charm</h3>
+<h3>
+Celestial Moon Charm
+</h3>
 
-<p>$3,890 MXN</p>
+<p>
+$3,890 MXN
+</p>
 
-<a href="#">Ver producto</a>
+<a
+href="#"
+onclick="abrirProducto('celestial'); return false;"
+>
+Ver producto
+</a>
 
 </div>
 
+
+<!-- PRODUCTO 5 -->
+
 <div class="card">
 
-<img src="images/images/images/DF8A85A2-3CCE-4556-8E74-5CD2B8D0BBF2.png">
+<img
+src="images/images/images/DF8A85A2-3CCE-4556-8E74-5CD2B8D0BBF2.png"
+alt="Royal Moon Charm"
+>
 
-<h3>Royal Moon Charm</h3>
+<h3>
+Royal Moon Charm
+</h3>
 
-<p>$4,190 MXN</p>
+<p>
+$4,190 MXN
+</p>
 
-<a href="#">Ver producto</a>
+<a
+href="#"
+onclick="abrirProducto('royalmoon'); return false;"
+>
+Ver producto
+</a>
 
 </div>
 
+
+<!-- PRODUCTO 6 -->
+
 <div class="card">
 
-<img src="images/images/images/DA7D9CA0-BA86-4371-AC15-F89104C1BA7F.png">
+<img
+src="images/images/images/DA7D9CA0-BA86-4371-AC15-F89104C1BA7F.png"
+alt="Lucky Clover Charm"
+>
 
-<h3>Lucky Clover Charm</h3>
+<h3>
+Lucky Clover Charm
+</h3>
 
-<p>$3,490 MXN</p>
+<p>
+$3,490 MXN
+</p>
 
-<a href="#">Ver producto</a>
+<a
+href="#"
+onclick="abrirProducto('clover'); return false;"
+>
+Ver producto
+</a>
 
 </div>
 
+
+<!-- PRODUCTO 7 -->
+
 <div class="card">
 
-<img src="images/images/images/95661F78-2282-4B22-A43F-2F0C881059CB.png">
+<img
+src="images/images/images/95661F78-2282-4B22-A43F-2F0C881059CB.png"
+alt="Royal Balloon Charm"
+>
 
-<h3>Royal Balloon Charm</h3>
+<h3>
+Royal Balloon Charm
+</h3>
 
-<p>$4,290 MXN</p>
+<p>
+$4,290 MXN
+</p>
 
-<a href="#">Ver producto</a>
+<a
+href="#"
+onclick="abrirProducto('balloon'); return false;"
+>
+Ver producto
+</a>
 
 </div>
 
+
+<!-- PRODUCTO 8 -->
+
 <div class="card">
 
-<img src="images/images/images/C975E088-BAFE-49FC-A824-8C8601B7F4DB.png">
+<img
+src="images/images/images/C975E088-BAFE-49FC-A824-8C8601B7F4DB.png"
+alt="Royal Gift Charm"
+>
 
-<h3>Royal Gift Charm</h3>
+<h3>
+Royal Gift Charm
+</h3>
 
-<p>$3,790 MXN</p>
+<p>
+$3,790 MXN
+</p>
 
-<a href="#">Ver producto</a>
+<a
+href="#"
+onclick="abrirProducto('gift'); return false;"
+>
+Ver producto
+</a>
 
 </div>
 
+
+<!-- PRODUCTO 9 -->
+
 <div class="card">
 
-<img src="images/images/images/F183B5AF-811D-45B1-A0EC-645CDD11BD85.png">
+<img
+src="images/images/images/F183B5AF-811D-45B1-A0EC-645CDD11BD85.png"
+alt="Moonlight Crown Charm"
+>
 
-<h3>Moonlight Crown Charm</h3>
+<h3>
+Moonlight Crown Charm
+</h3>
 
-<p>$4,090 MXN</p>
+<p>
+$4,090 MXN
+</p>
 
-<a href="#">Ver producto</a>
+<a
+href="#"
+onclick="abrirProducto('moonlight'); return false;"
+>
+Ver producto
+</a>
+
+</div>
+
+
+</div>
+
+
+<br><br>
+
+
+<div style="text-align:center;">
+
+<a
+href="#"
+class="boton"
+onclick="volverColecciones(); return false;"
+>
+← Volver a Colecciones
+</a>
+
+</div>
+
+</section>
+<!-- ========================================== -->
+<!-- DETALLE DE PRODUCTO -->
+<!-- ========================================== -->
+
+<section
+id="producto-detalle"
+class="colecciones"
+style="display:none;"
+>
+
+<div class="producto-detalle-contenedor">
+
+<div class="producto-detalle-caja">
+
+
+<!-- IMAGEN GRANDE DEL PRODUCTO -->
+
+<div class="producto-detalle-imagen">
+
+<img
+id="detalle-imagen"
+src=""
+alt="Producto Danpandora"
+>
+
+</div>
+
+
+<!-- INFORMACIÓN DEL PRODUCTO -->
+
+<div class="producto-detalle-info">
+
+<span
+class="etiqueta"
+id="detalle-etiqueta"
+>
+Danpandora
+</span>
+
+
+<h2
+id="detalle-nombre"
+>
+Producto Danpandora
+</h2>
+
+
+<p
+class="producto-precio"
+id="detalle-precio"
+>
+$0 MXN
+</p>
+
+
+<p
+class="producto-descripcion"
+id="detalle-descripcion"
+>
+Descripción del producto.
+</p>
+
+
+<a
+href="#"
+class="boton"
+onclick="volverProductos(); return false;"
+>
+← Volver a productos
+</a>
+
+
+</div>
 
 </div>
 
@@ -792,38 +1312,62 @@ Descubre la primera colección oficial de Danpandora.
 
 </section>
 
-<section id="colaboraciones" class="colecciones">
+<!-- ========================================== -->
+<!-- COLABORACIONES -->
+<!-- ========================================== -->
 
-<h2>Colaboraciones</h2>
+<section
+id="colaboraciones"
+class="colecciones"
+>
 
-<p style="text-align:center;
+<h2>
+Colaboraciones
+</h2>
+
+
+<p
+style="
+text-align:center;
 max-width:850px;
 margin:0 auto 70px;
 font-size:20px;
 line-height:1.9;
-color:#666;">
+color:#666;
+"
+>
 
-Danpandora desarrolla alianzas con marcas internacionales para crear proyectos exclusivos donde se unen lujo, belleza, moda y entretenimiento.
+Danpandora desarrolla alianzas con marcas internacionales
+para crear proyectos exclusivos donde se unen lujo,
+belleza, moda y entretenimiento.
 
 </p>
 
+
+<!-- SOFORA -->
+
 <div class="coleccion">
 
-<img src="images/images/images/IMG_1561.jpeg" alt="Sofora">
+<img
+src="images/images/images/IMG_1561.jpeg"
+alt="Sofora"
+>
 
 <div class="info">
 
 <span class="etiqueta">
-
 Marca Socia
-
 </span>
 
-<h3>Sofora</h3>
+<h3>
+Sofora
+</h3>
 
 <p>
 
-Sofora es la marca de belleza asociada a Danpandora. Ambas empresas colaboran desarrollando colecciones exclusivas que unen maquillaje, lujo y elegancia.
+Sofora es la marca de belleza asociada a Danpandora.
+Ambas empresas colaboran desarrollando colecciones
+exclusivas que unen maquillaje, lujo y elegancia.
 
 </p>
 
@@ -831,23 +1375,32 @@ Sofora es la marca de belleza asociada a Danpandora. Ambas empresas colaboran de
 
 </div>
 
+
+<!-- FLORENCE BY MILLS -->
+
 <div class="coleccion">
 
-<img src="images/images/images/IMG_6475.jpeg" alt="Florence by Mills">
+<img
+src="images/images/images/IMG_6475.jpeg"
+alt="Florence by Mills"
+>
 
 <div class="info">
 
 <span class="etiqueta">
-
 Beauty Partner
-
 </span>
 
-<h3>Florence by Mills</h3>
+<h3>
+Florence by Mills
+</h3>
 
 <p>
 
-Danpandora colaboró con Florence by Mills, la marca creada por Millie Bobby Brown, para desarrollar una colección inspirada en la belleza moderna, la creatividad y un estilo elegante.
+Danpandora colaboró con Florence by Mills,
+la marca creada por Millie Bobby Brown,
+para desarrollar una colección inspirada en
+la belleza moderna, la creatividad y un estilo elegante.
 
 </p>
 
@@ -855,23 +1408,32 @@ Danpandora colaboró con Florence by Mills, la marca creada por Millie Bobby Bro
 
 </div>
 
+
+<!-- LOUIS VUITTON -->
+
 <div class="coleccion">
 
-<img src="images/images/images/IMG_6474.jpeg" alt="Louis Vuitton">
+<img
+src="images/images/images/IMG_6474.jpeg"
+alt="Louis Vuitton"
+>
 
 <div class="info">
 
 <span class="etiqueta">
-
 Luxury Partner
-
 </span>
 
-<h3>Louis Vuitton</h3>
+<h3>
+Louis Vuitton
+</h3>
 
 <p>
 
-Una colaboración inspirada en la alta moda y la artesanía de lujo. Ambas marcas unen su esencia para crear piezas exclusivas con un diseño sofisticado y atemporal.
+Una colaboración inspirada en la alta moda
+y la artesanía de lujo. Ambas marcas unen
+su esencia para crear piezas exclusivas con
+un diseño sofisticado y atemporal.
 
 </p>
 
@@ -879,23 +1441,32 @@ Una colaboración inspirada en la alta moda y la artesanía de lujo. Ambas marca
 
 </div>
 
+
+<!-- HENRY DANGER -->
+
 <div class="coleccion">
 
-<img src="images/images/images/IMG_6473.jpeg" alt="Henry Danger The Movie">
+<img
+src="images/images/images/IMG_6473.jpeg"
+alt="Henry Danger The Movie"
+>
 
 <div class="info">
 
 <span class="etiqueta">
-
 Edición Especial
-
 </span>
 
-<h3>Henry Danger The Movie</h3>
+<h3>
+Henry Danger The Movie
+</h3>
 
 <p>
 
-Inspirada en el estreno de Henry Danger The Movie, esta colaboración celebra una franquicia que marcó la infancia de millones de personas mediante una colección exclusiva.
+Inspirada en el estreno de Henry Danger The Movie,
+esta colaboración celebra una franquicia que marcó
+la infancia de millones de personas mediante una
+colección exclusiva.
 
 </p>
 
@@ -903,27 +1474,45 @@ Inspirada en el estreno de Henry Danger The Movie, esta colaboración celebra un
 
 </div>
 
+
+<!-- PRÓXIMAMENTE -->
+
 <div class="coleccion">
 
-<div style="width:320px;height:320px;background:#f7f3ec;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:90px;color:#b89233;margin:auto;">
-
+<div
+style="
+width:320px;
+height:320px;
+background:#f7f3ec;
+border-radius:18px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:90px;
+color:#b89233;
+margin:auto;
+"
+>
 ★
-
 </div>
+
 
 <div class="info">
 
 <span class="etiqueta">
-
 Muy Pronto
-
 </span>
 
-<h3>Próximamente</h3>
+<h3>
+Próximamente
+</h3>
 
 <p>
 
-Danpandora continúa preparando nuevas colaboraciones internacionales con reconocidas marcas y personalidades para presentar futuras colecciones exclusivas.
+Danpandora continúa preparando nuevas
+colaboraciones internacionales con reconocidas
+marcas y personalidades para presentar futuras
+colecciones exclusivas.
 
 </p>
 
@@ -933,23 +1522,47 @@ Danpandora continúa preparando nuevas colaboraciones internacionales con recono
 
 </section>
 
-<section id="noticias" class="colecciones">
+<!-- ========================================== -->
+<!-- NOTICIAS -->
+<!-- ========================================== -->
 
-<h2>Noticias</h2>
+<section
+id="noticias"
+class="colecciones"
+>
+
+<h2>
+Noticias
+</h2>
+
+
+<!-- NOTICIA 1 -->
 
 <div class="coleccion">
 
-<img src="images/images/images/0989022B-825A-48B1-BE79-5936972ACAED.png" alt="Henry Danger">
+<img
+src="images/images/images/0989022B-825A-48B1-BE79-5936972ACAED.png"
+alt="Henry Danger"
+>
 
 <div class="info">
 
-<span class="etiqueta">25 de julio de 2026</span>
+<span class="etiqueta">
+25 de julio de 2026
+</span>
 
-<h3>Danpandora × Sofora × Henry Danger The Movie</h3>
+<h3>
+Danpandora × Sofora × Henry Danger The Movie
+</h3>
 
 <p>
 
-Danpandora anunció oficialmente su colaboración junto a Sofora y Henry Danger The Movie. La colección incluirá productos exclusivos inspirados en la película y será presentada oficialmente durante los próximos meses.
+Danpandora anunció oficialmente su colaboración
+junto a Sofora y Henry Danger The Movie.
+
+La colección incluirá productos exclusivos
+inspirados en la película y será presentada
+oficialmente durante los próximos meses.
 
 </p>
 
@@ -957,19 +1570,31 @@ Danpandora anunció oficialmente su colaboración junto a Sofora y Henry Danger 
 
 </div>
 
+
+<!-- NOTICIA 2 -->
+
 <div class="coleccion">
 
-<img src="images/images/images/BBC5B678-BAB8-4AC9-A42E-6669FEDC1A5F.png" alt="Socias">
+<img
+src="images/images/images/BBC5B678-BAB8-4AC9-A42E-6669FEDC1A5F.png"
+alt="Danpandora y Sofora"
+>
 
 <div class="info">
 
-<span class="etiqueta">23 de junio de 2026</span>
+<span class="etiqueta">
+23 de junio de 2026
+</span>
 
-<h3>Danpandora y Sofora se convierten en marcas socias</h3>
+<h3>
+Danpandora y Sofora se convierten en marcas socias
+</h3>
 
 <p>
 
-Danpandora y Sofora anunciaron oficialmente su alianza permanente para desarrollar futuras colecciones de lujo, belleza y joyería.
+Danpandora y Sofora anunciaron oficialmente
+su alianza permanente para desarrollar futuras
+colecciones de lujo, belleza y joyería.
 
 </p>
 
@@ -977,19 +1602,32 @@ Danpandora y Sofora anunciaron oficialmente su alianza permanente para desarroll
 
 </div>
 
+
+<!-- NOTICIA 3 -->
+
 <div class="coleccion">
 
-<img src="images/images/images/0989022B-825A-48B1-BE79-5936972ACAED.png" alt="Video">
+<img
+src="images/images/images/0989022B-825A-48B1-BE79-5936972ACAED.png"
+alt="Video oficial"
+>
 
 <div class="info">
 
-<span class="etiqueta">29 de junio de 2026</span>
+<span class="etiqueta">
+29 de junio de 2026
+</span>
 
-<h3>Se anuncia el video oficial de la colección</h3>
+<h3>
+Se anuncia el video oficial de la colección
+</h3>
 
 <p>
 
-La Maison confirmó que próximamente se publicará un video mostrando todos los productos de la colaboración Danpandora × Sofora × Henry Danger The Movie.
+La Maison confirmó que próximamente se publicará
+un video mostrando todos los productos de la
+colaboración Danpandora × Sofora × Henry Danger
+The Movie.
 
 </p>
 
@@ -998,34 +1636,59 @@ La Maison confirmó que próximamente se publicará un video mostrando todos los
 </div>
 
 </section>
-  
-<section id="contacto" class="colecciones">
 
-<h2>Contacto</h2>
+<!-- ========================================== -->
+<!-- CONTACTO -->
+<!-- ========================================== -->
+
+<section
+id="contacto"
+class="colecciones"
+>
+
+<h2>
+Contacto
+</h2>
+
 
 <div class="coleccion">
 
 <div class="info">
 
-<span class="etiqueta">Contacto Oficial</span>
+<span class="etiqueta">
+Contacto Oficial
+</span>
 
-<h3>Maison Danpandora</h3>
+
+<h3>
+Maison Danpandora
+</h3>
+
 
 <p>
 
-Este correo es exclusivamente para colaboraciones, empresas, prensa y asuntos oficiales relacionados con Danpandora.
+Este correo es exclusivamente para
+colaboraciones, empresas, prensa y asuntos
+oficiales relacionados con Danpandora.
 
 </p>
 
+
 <p>
 
-No se responderán mensajes personales o relacionados con juegos.
+No se responderán mensajes personales
+o relacionados con juegos.
 
 </p>
 
+
 <p>
 
-<strong>Correo oficial:</strong><br><br>
+<strong>
+Correo oficial:
+</strong>
+
+<br><br>
 
 dannabenvaz05@gmail.com
 
@@ -1036,134 +1699,622 @@ dannabenvaz05@gmail.com
 </div>
 
 </section>
-  
+
+<!-- ========================================== -->
+<!-- JAVASCRIPT -->
+<!-- ========================================== -->
+
 <script>
+
+/* ========================================== */
+/* ACCESO CON CONTRASEÑA */
+/* ========================================== */
+
+let acceso = false;
+
 
 function entrar(){
 
-let clave=document.getElementById("password").value;
+    let clave = document.getElementById("password").value;
 
-if(clave==="Dan2026"){
 
-document.querySelector(".hero").style.display="none";
+    if(clave === "Dan2026"){
 
-mostrar("inicio");
+        acceso = true;
 
-}else{
+        document.querySelector(".hero").style.display = "none";
 
-document.getElementById("mensaje").innerHTML="Contraseña incorrecta.";
+        mostrar("inicio");
+
+    }
+
+    else{
+
+        document.getElementById("mensaje").innerHTML =
+        "Contraseña incorrecta.";
+
+    }
 
 }
 
+
+/* ========================================== */
+/* NAVEGACIÓN PRINCIPAL */
+/* ========================================== */
+
+function mostrar(seccion){
+
+    if(!acceso){
+        return;
+    }
+
+
+    document.getElementById("inicio").style.display = "none";
+
+    document.getElementById("historia").style.display = "none";
+
+    document.getElementById("colecciones").style.display = "none";
+
+    document.getElementById("colaboraciones").style.display = "none";
+
+    document.getElementById("noticias").style.display = "none";
+
+    document.getElementById("contacto").style.display = "none";
+
+    document.getElementById("danpandora-productos").style.display = "none";
+
+    document.getElementById("producto-detalle").style.display = "none";
+
+
+    document.getElementById(seccion).style.display = "block";
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
 }
+
+
+/* ========================================== */
+/* ABRIR COLECCIÓN DANPANDORA */
+/* ========================================== */
+
+function mostrarColeccionDanpandora(){
+
+    if(!acceso){
+        return;
+    }
+
+
+    document.getElementById("inicio").style.display = "none";
+
+    document.getElementById("historia").style.display = "none";
+
+    document.getElementById("colecciones").style.display = "none";
+
+    document.getElementById("colaboraciones").style.display = "none";
+
+    document.getElementById("noticias").style.display = "none";
+
+    document.getElementById("contacto").style.display = "none";
+
+    document.getElementById("producto-detalle").style.display = "none";
+
+
+    document.getElementById("danpandora-productos").style.display = "block";
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+/* ========================================== */
+/* VOLVER DE LOS PRODUCTOS A COLECCIONES */
+/* ========================================== */
+
+function volverColecciones(){
+
+    document.getElementById("danpandora-productos").style.display = "none";
+
+    document.getElementById("producto-detalle").style.display = "none";
+
+    document.getElementById("colecciones").style.display = "block";
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+/* ========================================== */
+/* INFORMACIÓN DE LOS 9 PRODUCTOS */
+/* ========================================== */
+
+const productosDanpandora = {
+
+    signature: {
+
+        nombre: "Pulsera Signature Crown",
+
+        precio: "$8,990 MXN",
+
+        imagen: "images/images/images/EC270B51-6507-4574-A9AD-7C3DCF11FB57.png",
+
+        descripcion:
+        "La base de la colección DanPandora. Fabricada en plata esterlina 925 con un exclusivo charm central de corona integrado, diseñada para personalizarse con tus charms favoritos."
+
+    },
+
+
+    heart: {
+
+        nombre: "Royal Heart Charm",
+
+        precio: "$3,290 MXN",
+
+        imagen: "images/images/images/CADA6735-BDF6-4448-A93B-A8BF6F047DD2.png",
+
+        descripcion:
+        "Un delicado corazón en tono oro rosa con una corona de circonias al centro. Representa el amor propio, la elegancia y la realeza."
+
+    },
+
+
+    compass: {
+
+        nombre: "Royal Compass Charm",
+
+        precio: "$3,690 MXN",
+
+        imagen: "images/images/images/B1280CD5-B0BE-4832-927C-1A7908FAC3A7.png",
+
+        descripcion:
+        "Una brújula en oro rosa con cristales brillantes que simboliza los nuevos comienzos y el valor de seguir tu propio camino."
+
+    },
+
+
+    celestial: {
+
+        nombre: "Celestial Moon Charm",
+
+        precio: "$3,890 MXN",
+
+        imagen: "images/images/images/DDC965A6-10D2-404D-B0C9-BA452633F5FF.png",
+
+        descripcion:
+        "Media luna plateada con estrellas y un cristal azul profundo. Inspirado en la magia del cielo nocturno y los sueños inolvidables."
+
+    },
+
+
+    royalmoon: {
+
+        nombre: "Royal Moon Charm",
+
+        precio: "$4,190 MXN",
+
+        imagen: "images/images/images/DF8A85A2-3CCE-4556-8E74-5CD2B8D0BBF2.png",
+
+        descripcion:
+        "Un elegante diseño en oro con una media luna azul marino y una brújula estelar al centro. Una pieza exclusiva que simboliza la guía, la ambición y el lujo atemporal."
+
+    },
+
+
+    clover: {
+
+        nombre: "Lucky Clover Charm",
+
+        precio: "$3,490 MXN",
+
+        imagen: "images/images/images/DA7D9CA0-BA86-4371-AC15-F89104C1BA7F.png",
+
+        descripcion:
+        "Un trébol de cuatro hojas con delicados tonos verde jade y detalles de circonia. Un símbolo de fortuna y esperanza."
+
+    },
+
+
+    balloon: {
+
+        nombre: "Royal Balloon Charm",
+
+        precio: "$4,290 MXN",
+
+        imagen: "images/images/images/95661F78-2282-4B22-A43F-2F0C881059CB.png",
+
+        descripcion:
+        "Un globo aerostático en esmalte azul con acabados en plata. Diseñado para representar la aventura, la libertad y los viajes extraordinarios."
+
+    },
+
+
+    gift: {
+
+        nombre: "Royal Gift Charm",
+
+        precio: "$3,790 MXN",
+
+        imagen: "images/images/images/C975E088-BAFE-49FC-A824-8C8601B7F4DB.png",
+
+        descripcion:
+        "Un elegante regalo en oro rosa con lazo esmaltado y una pequeña corona al frente. Creado para celebrar momentos especiales e inolvidables."
+
+    },
+
+
+    moonlight: {
+
+        nombre: "Moonlight Crown Charm",
+
+        precio: "$4,090 MXN",
+
+        imagen: "images/images/images/F183B5AF-811D-45B1-A0EC-645CDD11BD85.png",
+
+        descripcion:
+        "Una media luna en oro rosa con una delicada corona, estrellas y circonias brillantes. Inspirado en la belleza del cielo nocturno y en quienes brillan con luz propia."
+
+    }
+
+};
+
+
+/* ========================================== */
+/* ABRIR UN PRODUCTO */
+/* ========================================== */
+
+function verProducto(id){
+
+    if(!acceso){
+        return;
+    }
+
+
+    let producto = productosDanpandora[id];
+
+
+    if(!producto){
+        return;
+    }
+
+
+    document.getElementById("danpandora-productos").style.display = "none";
+
+    document.getElementById("colecciones").style.display = "none";
+
+
+    document.getElementById("detalle-imagen").src =
+    producto.imagen;
+
+
+    document.getElementById("detalle-imagen").alt =
+    producto.nombre;
+
+
+    document.getElementById("detalle-nombre").innerText =
+    producto.nombre;
+
+
+    document.getElementById("detalle-precio").innerText =
+    producto.precio;
+
+
+    document.getElementById("detalle-descripcion").innerText =
+    producto.descripcion;
+
+
+    document.getElementById("detalle-etiqueta").innerText =
+    "Danpandora";
+
+
+    document.getElementById("producto-detalle").style.display =
+    "block";
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+/* ========================================== */
+/* VOLVER DE UN PRODUCTO A LOS 9 PRODUCTOS */
+/* ========================================== */
+
+function volverProductos(){
+
+    document.getElementById("producto-detalle").style.display = "none";
+
+    document.getElementById("danpandora-productos").style.display = "block";
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+/* ========================================== */
+/* ENTER PARA INICIAR SESIÓN */
+/* ========================================== */
+
+document.addEventListener("keydown", function(e){
+
+    if(
+        e.key === "Enter" &&
+        document.querySelector(".hero").style.display !== "none"
+    ){
+
+        entrar();
+
+    }
+
+});
+
+
+/* ========================================== */
+/* ESTADO INICIAL */
+/* ========================================== */
+
+window.onload = function(){
+
+    document.getElementById("inicio").style.display = "none";
+
+    document.getElementById("historia").style.display = "none";
+
+    document.getElementById("colecciones").style.display = "none";
+
+    document.getElementById("colaboraciones").style.display = "none";
+
+    document.getElementById("noticias").style.display = "none";
+
+    document.getElementById("contacto").style.display = "none";
+
+    document.getElementById("danpandora-productos").style.display = "none";
+
+    document.getElementById("producto-detalle").style.display = "none";
+
+};
+
+</script>
+
+<!-- =========================
+     PARTE 10 — JAVASCRIPT FINAL
+     ========================= -->
+
+<script>
+
+/* =========================
+   CONTROL DE ACCESO
+   ========================= */
 
 let acceso = false;
 
 function entrar(){
 
-let clave = document.getElementById("password").value;
+    const clave = document.getElementById("password").value;
 
-if(clave === "Dan2026"){
+    if(clave === "Dan2026"){
 
-acceso = true;
+        acceso = true;
 
-document.querySelector(".hero").style.display = "none";
+        document.querySelector(".hero").style.display = "none";
 
-mostrar("inicio");
+        mostrar("inicio");
 
-}else{
+    }else{
 
-document.getElementById("mensaje").innerHTML = "Contraseña incorrecta.";
+        document.getElementById("mensaje").innerHTML =
+        "Contraseña incorrecta.";
+
+    }
 
 }
 
-}
+
+/* =========================
+   CAMBIO DE SECCIONES
+   ========================= */
 
 function mostrar(seccion){
 
-if(!acceso){
+    if(!acceso){
+        return;
+    }
 
-return;
+    const secciones = [
+        "inicio",
+        "historia",
+        "colecciones",
+        "colaboraciones",
+        "noticias",
+        "contacto"
+    ];
+
+    secciones.forEach(function(id){
+
+        const elemento = document.getElementById(id);
+
+        if(elemento){
+            elemento.style.display = "none";
+        }
+
+    });
+
+    /* La colección privada de productos
+       permanece oculta hasta que se pulse
+       "Explorar colección". */
+
+    const productos =
+    document.getElementById("danpandora-productos");
+
+    if(productos){
+        productos.style.display = "none";
+    }
+
+    const seleccion =
+    document.getElementById(seccion);
+
+    if(seleccion){
+
+        seleccion.style.display = "block";
+
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
+
+    }
 
 }
 
-document.getElementById("inicio").style.display="none";
 
-document.getElementById("historia").style.display="none";
-
-document.getElementById("colecciones").style.display="none";
-
-document.getElementById("colaboraciones").style.display="none";
-
-document.getElementById("noticias").style.display="none";
-
-document.getElementById("contacto").style.display="none";
-
-document.getElementById(seccion).style.display="block";
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
-}
-  
-document.addEventListener("keydown",function(e){
-
-if(e.key==="Enter" && document.querySelector(".hero").style.display!=="none"){
-
-entrar();
-
-}
-
-});
-
-window.onload=function(){
-
-document.getElementById("inicio").style.display="none";
-
-document.getElementById("historia").style.display="none";
-
-document.getElementById("colecciones").style.display="none";
-
-document.getElementById("colaboraciones").style.display="none";
-
-document.getElementById("noticias").style.display="none";
-
-document.getElementById("contacto").style.display="none";
-
-};
+/* =========================
+   COLECCIÓN PRIVADA
+   ========================= */
 
 function mostrarColeccionDanpandora(){
 
-document.getElementById("colecciones").style.display="none";
+    if(!acceso){
+        return;
+    }
 
-document.getElementById("danpandora-productos").style.display="block";
+    /* Ocultar todas las secciones normales */
 
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
+    const secciones = [
+        "inicio",
+        "historia",
+        "colecciones",
+        "colaboraciones",
+        "noticias",
+        "contacto"
+    ];
+
+    secciones.forEach(function(id){
+
+        const elemento = document.getElementById(id);
+
+        if(elemento){
+            elemento.style.display = "none";
+        }
+
+    });
+
+    /* Mostrar únicamente los productos */
+
+    const productos =
+    document.getElementById("danpandora-productos");
+
+    if(productos){
+
+        productos.style.display = "block";
+
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
+
+    }
 
 }
+
+
+/* =========================
+   VOLVER A COLECCIONES
+   ========================= */
 
 function volverColecciones(){
 
-document.getElementById("danpandora-productos").style.display="none";
+    if(!acceso){
+        return;
+    }
 
-document.getElementById("colecciones").style.display="block";
+    const productos =
+    document.getElementById("danpandora-productos");
 
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
+    if(productos){
+        productos.style.display = "none";
+    }
+
+    const colecciones =
+    document.getElementById("colecciones");
+
+    if(colecciones){
+
+        colecciones.style.display = "block";
+
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
+
+    }
 
 }
 
+
+/* =========================
+   ENTER EN LA CONTRASEÑA
+   ========================= */
+
+document.addEventListener("keydown", function(e){
+
+    if(
+        e.key === "Enter" &&
+        document.querySelector(".hero").style.display !== "none"
+    ){
+
+        entrar();
+
+    }
+
+});
+
+
+/* =========================
+   ESTADO INICIAL
+   ========================= */
+
+window.onload = function(){
+
+    const secciones = [
+        "inicio",
+        "historia",
+        "colecciones",
+        "colaboraciones",
+        "noticias",
+        "contacto",
+        "danpandora-productos"
+    ];
+
+    secciones.forEach(function(id){
+
+        const elemento = document.getElementById(id);
+
+        if(elemento){
+            elemento.style.display = "none";
+        }
+
+    });
+
+};
+
 </script>
+
 
 <footer>
 
@@ -1177,4 +2328,4 @@ Proyecto ficticio desarrollado con fines creativos.
 
 </body>
 
-</html>
+</html>  
